@@ -1,15 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
 
 import numpy as np
 import random as random
-
-
-# In[ ]:
 
 
 # Script to calculate numerical simulation of the number of cells on the markovian and no markovian models 
@@ -31,9 +22,6 @@ import random as random
 #          Istituto dei Sistemi Complessi, Consiglio Nazionale delle Ricerche, via dei Taurini 19, 00185 Rome,Italy
          
 # Last update: 23 May 2023
-
-
-# In[ ]:
 
 
 # nt is a function that returns an array of M elements, where each element is a realization of the number of cells over time
