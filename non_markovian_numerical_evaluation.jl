@@ -6,16 +6,17 @@ k is the order of the pole
 T is the refractory period
 γ is the proliferation rate
 """
-pole(k::Int,T::Float64,γ::Float64) = -γ  + LambertW.lambertw(2T*γ* exp(T*γ)+0im,k)/T  # Expression II.11 from Supplementary material"
+pole(k::Int,T::Float64,γ::Float64) = -γ  + LambertW.lambertw(2T*γ* exp(T*γ)+0im,k)/T  # Expression II.11 from Supplementary material
 
-"Expression II.9 from Supplementary material"
-ϕ(s,T,γ) =  s + γ * (1 - 2*exp(-T*s) ) 
+
+ϕ(s,T,γ) =  s + γ * (1 - 2*exp(-T*s) ) #Expression II.9 from Supplementary material
 
 ϕp(s,T,γ) = 1 + 2*γ*T* exp(-T*s) 
 
 
 
 "conv is a convolution function that uses DSP.conv from Julia"
+
 function conv(t,f,g)
     z=zero(t)
     dt=t[2]-t[1]
